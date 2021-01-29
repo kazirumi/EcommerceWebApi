@@ -19,6 +19,11 @@ namespace AngularAndAsp.NetCoreWebApiEcommerce
         public DbSet<QuantityType> QuantityType { get; set; }
 
         public DbSet<Product> Product { get; set; }
+        public DbSet<Order> Order { get; set; }
+
+        public DbSet<OrderDetails> OrderDetails { get; set; }
+
+
 
 
 

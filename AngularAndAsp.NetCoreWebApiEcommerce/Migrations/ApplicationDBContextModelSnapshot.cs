@@ -18,6 +18,49 @@ namespace AngularAndAsp.NetCoreWebApiEcommerce.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("AngularAndAsp.NetCoreWebApiEcommerce.Models.Order", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .IsRequired();
+
+                    b.Property<string>("Email")
+                        .IsRequired();
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.Property<int>("PhoneNumber");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Order");
+                });
+
+            modelBuilder.Entity("AngularAndAsp.NetCoreWebApiEcommerce.Models.OrderDetails", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("OrderID");
+
+                    b.Property<float>("Price");
+
+                    b.Property<int>("ProductID");
+
+                    b.Property<int>("Quantity");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("OrderID");
+
+                    b.ToTable("OrderDetails");
+                });
+
             modelBuilder.Entity("AngularAndAsp.NetCoreWebApiEcommerce.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -97,6 +140,14 @@ namespace AngularAndAsp.NetCoreWebApiEcommerce.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("SpecialTag");
+                });
+
+            modelBuilder.Entity("AngularAndAsp.NetCoreWebApiEcommerce.Models.OrderDetails", b =>
+                {
+                    b.HasOne("AngularAndAsp.NetCoreWebApiEcommerce.Models.Order")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("OrderID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("AngularAndAsp.NetCoreWebApiEcommerce.Models.Product", b =>
