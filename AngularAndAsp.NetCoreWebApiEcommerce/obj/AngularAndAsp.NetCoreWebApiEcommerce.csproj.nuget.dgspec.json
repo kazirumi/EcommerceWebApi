@@ -1,34 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "G:\\AngularEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce.csproj": {}
+    "E:\\EcommerceWebApi\\AngularAndAsp.NetCoreWebApiEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce.csproj": {}
   },
   "projects": {
-    "G:\\AngularEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce.csproj": {
+    "E:\\EcommerceWebApi\\AngularAndAsp.NetCoreWebApiEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\AngularEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce.csproj",
+        "projectUniqueName": "E:\\EcommerceWebApi\\AngularAndAsp.NetCoreWebApiEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce.csproj",
         "projectName": "AngularAndAsp.NetCoreWebApiEcommerce",
-        "projectPath": "G:\\AngularEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce.csproj",
-        "packagesPath": "C:\\Users\\rumi\\.nuget\\packages\\",
-        "outputPath": "G:\\AngularEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce\\obj\\",
+        "projectPath": "E:\\EcommerceWebApi\\AngularAndAsp.NetCoreWebApiEcommerce\\AngularAndAsp.NetCoreWebApiEcommerce.csproj",
+        "packagesPath": "C:\\Users\\Kazi Rumi\\.nuget\\packages\\",
+        "outputPath": "E:\\EcommerceWebApi\\AngularAndAsp.NetCoreWebApiEcommerce\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\rumi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Kazi Rumi\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
             "projectReferences": {}
           }
         },
@@ -40,6 +39,7 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
           "dependencies": {
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
@@ -68,10 +68,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
