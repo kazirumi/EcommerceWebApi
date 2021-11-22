@@ -10,6 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.Text;
 using System.IdentityModel.Tokens.Jwt;
+using Microsoft.Extensions.Options;
 
 namespace AngularAndAsp.NetCoreWebApiEcommerce.Controllers
 {
@@ -19,13 +20,15 @@ namespace AngularAndAsp.NetCoreWebApiEcommerce.Controllers
     {
         private UserManager<ApplicationUser> _userManager;
         private SignInManager<ApplicationUser> _signInManager;
+        private readonly ApplicationSettings _appSettings;
 
     
 
-        public ApplicationUsers(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        public ApplicationUsers(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,IOptions<ApplicationSettings> appSettings)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _appSettings = appSettings.Value;
         }
 
         [HttpPost]
@@ -68,8 +71,8 @@ namespace AngularAndAsp.NetCoreWebApiEcommerce.Controllers
                     {
                         new Claim("UserID", user.Id.ToString())
                     }),
-                    Expires = DateTime.UtcNow.AddMinutes(5),
-                    SigningCredentials=new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes("1234567890123456")),SecurityAlgorithms.HmacSha256)
+                    Expires = DateTime.UtcNow.AddMinutes(30),
+                    SigningCredentials=new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_appSettings.JWT_Secret)),SecurityAlgorithms.HmacSha256)
 
                 };
 
@@ -82,7 +85,7 @@ namespace AngularAndAsp.NetCoreWebApiEcommerce.Controllers
             }
             else
             {
-                return BadRequest(new { message = "User Name or Password is Incrrect" });
+                return BadRequest(new { message = "User Name or Password is Incorrect" });
             }
         }
 
