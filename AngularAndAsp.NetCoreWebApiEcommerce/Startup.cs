@@ -50,8 +50,9 @@ namespace AngularAndAsp.NetCoreWebApiEcommerce
 
             });
 
-            services.AddDefaultIdentity<ApplicationUser>
-                ().AddEntityFrameworkStores<ApplicationDBContext>();
+            services.AddDefaultIdentity<ApplicationUser>()
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDBContext>();
 
             services.AddCors(options =>
             {

@@ -36,6 +36,7 @@ namespace AngularAndAsp.NetCoreWebApiEcommerce.Controllers
         //Post: api/ApplicationUsers/Register
         public async Task<object> PostApplicationUser(ApplicationUserModel model)
         {
+            model.Role = "Customer";
             var applicationUser = new ApplicationUser()
             {
                 UserName = model.UserName,
@@ -47,6 +48,7 @@ namespace AngularAndAsp.NetCoreWebApiEcommerce.Controllers
             try
             {
                 var result = await _userManager.CreateAsync(applicationUser,model.Password);
+                await _userManager.AddToRoleAsync(applicationUser,model.Role);
                 return Ok(result);
             }
             catch(Exception ex)
@@ -65,11 +67,18 @@ namespace AngularAndAsp.NetCoreWebApiEcommerce.Controllers
             
             if (user!=null && await _userManager.CheckPasswordAsync(user, model.Password))
             {
+
+                var role = await _userManager.GetRolesAsync(user);
+                IdentityOptions _options = new IdentityOptions();
+
                 var tokenDescriptor = new SecurityTokenDescriptor
                 {
+                    //get role Assigned
                     Subject = new ClaimsIdentity(new Claim[]
                     {
-                        new Claim("UserID", user.Id.ToString())
+
+                        new Claim("UserID", user.Id.ToString()),
+                        new Claim(_options.ClaimsIdentity.RoleClaimType,role.FirstOrDefault())
                     }),
                     Expires = DateTime.UtcNow.AddMinutes(30),
                     SigningCredentials=new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_appSettings.JWT_Secret)),SecurityAlgorithms.HmacSha256)

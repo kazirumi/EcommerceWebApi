@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AngularAndAsp.NetCoreWebApiEcommerce;
 using AngularAndAsp.NetCoreWebApiEcommerce.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AngularAndAsp.NetCoreWebApiEcommerce.Controllers
 {
@@ -23,16 +24,18 @@ namespace AngularAndAsp.NetCoreWebApiEcommerce.Controllers
 
         // GET: api/Orders
         [HttpGet]
+        [Authorize(Roles ="Admin")]
         public async Task<ActionResult<IEnumerable<Order>>> GetOrder()
         {
-            return await _context.Order.ToListAsync();
+            return await _context.Order.Include(c=>c.OrderDetails).ToListAsync();
         }
 
         // GET: api/Orders/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Order>> GetOrder(int id)
+        [HttpGet("{Name}")]
+        [Authorize(Roles = "Admin,Customer")]
+        public ActionResult<List<Order>> GetOrder(string Name)
         {
-            var order = await _context.Order.FindAsync(id);
+            var order =  _context.Order.Include(c => c.OrderDetails).Where(x => x.Name == Name).ToList();
 
             if (order == null)
             {
@@ -76,6 +79,7 @@ namespace AngularAndAsp.NetCoreWebApiEcommerce.Controllers
         [HttpPost]
         public async Task<ActionResult<Order>> PostOrder(Order order)
         {
+            order.OrderDate = DateTime.Now;
             _context.Order.Add(order);
             await _context.SaveChangesAsync();
 

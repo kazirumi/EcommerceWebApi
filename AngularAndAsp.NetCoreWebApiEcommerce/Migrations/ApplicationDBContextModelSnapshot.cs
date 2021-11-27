@@ -34,6 +34,8 @@ namespace AngularAndAsp.NetCoreWebApiEcommerce.Migrations
                     b.Property<string>("Name")
                         .IsRequired();
 
+                    b.Property<DateTime>("OrderDate");
+
                     b.Property<int>("PhoneNumber");
 
                     b.HasKey("ID");

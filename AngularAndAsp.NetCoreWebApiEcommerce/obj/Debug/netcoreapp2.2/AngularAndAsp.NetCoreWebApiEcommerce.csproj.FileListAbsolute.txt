@@ -47,3 +47,17 @@ F:\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\obj\Debug\netcoreapp2.2\
 F:\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\obj\Debug\netcoreapp2.2\AngularAndAsp.NetCoreWebApiEcommerce.dll
 F:\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\obj\Debug\netcoreapp2.2\AngularAndAsp.NetCoreWebApiEcommerce.pdb
 F:\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\obj\Debug\netcoreapp2.2\AngularAndAsp.NetCoreWebApiEcommerce.genruntimeconfig.cache
+G:\AngularEcommerce\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\bin\Debug\netcoreapp2.2\AngularAndAsp.NetCoreWebApiEcommerce.deps.json
+G:\AngularEcommerce\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\bin\Debug\netcoreapp2.2\AngularAndAsp.NetCoreWebApiEcommerce.runtimeconfig.json
+G:\AngularEcommerce\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\bin\Debug\netcoreapp2.2\AngularAndAsp.NetCoreWebApiEcommerce.runtimeconfig.dev.json
+G:\AngularEcommerce\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\bin\Debug\netcoreapp2.2\AngularAndAsp.NetCoreWebApiEcommerce.dll
+G:\AngularEcommerce\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\bin\Debug\netcoreapp2.2\AngularAndAsp.NetCoreWebApiEcommerce.pdb
+G:\AngularEcommerce\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\obj\Debug\netcoreapp2.2\AngularAndAsp.NetCoreWebApiEcommerce.csprojAssemblyReference.cache
+G:\AngularEcommerce\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\obj\Debug\netcoreapp2.2\AngularAndAsp.NetCoreWebApiEcommerce.csproj.CoreCompileInputs.cache
+G:\AngularEcommerce\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\obj\Debug\netcoreapp2.2\AngularAndAsp.NetCoreWebApiEcommerce.RazorAssemblyInfo.cache
+G:\AngularEcommerce\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\obj\Debug\netcoreapp2.2\AngularAndAsp.NetCoreWebApiEcommerce.RazorAssemblyInfo.cs
+G:\AngularEcommerce\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\obj\Debug\netcoreapp2.2\AngularAndAsp.NetCoreWebApiEcommerce.AssemblyInfoInputs.cache
+G:\AngularEcommerce\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\obj\Debug\netcoreapp2.2\AngularAndAsp.NetCoreWebApiEcommerce.AssemblyInfo.cs
+G:\AngularEcommerce\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\obj\Debug\netcoreapp2.2\AngularAndAsp.NetCoreWebApiEcommerce.RazorTargetAssemblyInfo.cache
+G:\AngularEcommerce\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\obj\Debug\netcoreapp2.2\AngularAndAsp.NetCoreWebApiEcommerce.dll
+G:\AngularEcommerce\EcommerceWebApi\AngularAndAsp.NetCoreWebApiEcommerce\obj\Debug\netcoreapp2.2\AngularAndAsp.NetCoreWebApiEcommerce.pdb

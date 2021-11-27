@@ -24,6 +24,9 @@ namespace AngularAndAsp.NetCoreWebApiEcommerce.Models
         [EmailAddress]
         public string Email { get; set; }
 
+        [DataType(DataType.Date)]
+        public DateTime OrderDate { get; set; }
+
         public List<OrderDetails> OrderDetails { get; set; }
 
     }

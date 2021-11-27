@@ -34,8 +34,8 @@ namespace AngularAndAsp.NetCoreWebApiEcommerce.Controllers
 
                 user.FullName,
                 user.Email,
-                user.UserName
-
+                user.UserName,
+                
             };
         }
     }
